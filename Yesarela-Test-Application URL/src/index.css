@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.app-title {
+  font-size: larger;
+  font-weight: bolder;
+  font-family: 'Verdana', 'Geneva', sans-serif;
+}
