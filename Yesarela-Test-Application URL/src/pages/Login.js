@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
 import LoginService from '../services/login-service';
-
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBInput
+}
+from 'mdb-react-ui-kit';
+import './login.css'
 class Login extends Component{
     
     constructor(props){
@@ -39,50 +48,39 @@ class Login extends Component{
     }
     render(){
         return(
-            <div className="row">
-                <div className="col s12 m8 l4 offset-m2 offset-l4">
-                <div className="card">
-            
-                    <div className="card-action blue lighten-1 white-text">
-                    <b><i className="material-icons f300">person_pin</i></b>
-                    </div>
-            
-                    <div className="card-content">
-                        <div className="row">
-                            <div className="col s12">
-                                <div className="input-field col s12">
-                                    <input type="text" name="username" required autoComplete="off" onChange={this.onChangeUserName}/>
-                                    <label htmlFor="username">Usuario</label>
-                                </div>                       
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col s12">
-                                <div className="input-field col s12">
-                                    <input type="password" name="password" required autoComplete="off" onChange={this.onChangePassword}/>
-                                    <label htmlFor="password">Contraseña</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col s12">
-                                <div className="col s12">
-                                    <label>
-                                        <input name="rememberme" type="checkbox" />
-                                        <span>Recordarme</span>
-                                    </label>               
-                                </div>                     
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col s12">
-                                <button type="button" className="btn-large waves-effect waves-dark  blue darken-4" onClick={this.login}>Inciar sesión</button>
-                            </div>
-                        </div>
-                    </div>      
+            <MDBContainer fluid>
+            <MDBRow>
+      
+              <MDBCol sm='6'>
+      
+                <div className='d-flex flex-row ps-5 pt-5'>
+                  <MDBIcon fas icon="crow fa-3x me-3" style={{ color: '#709085' }}/>
+                  <span className="h1 fw-bold mb-0">Logo</span>
                 </div>
+      
+                <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
+      
+                  <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Log in</h3>
+      
+                  <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
+                  <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
+      
+                  <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg'>Login</MDBBtn>
+                  <p className="small mb-5 pb-lg-3 ms-5"><a class="text-muted" href="#!">Forgot password?</a></p>
+                  <p className='ms-5'>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
+      
                 </div>
-            </div>
+      
+              </MDBCol>
+      
+              <MDBCol sm='6' className='d-none d-sm-block px-0'>
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
+                  alt="Login image" className="w-100" style={{objectFit: 'cover', objectPosition: 'left'}} />
+              </MDBCol>
+      
+            </MDBRow>
+      
+          </MDBContainer>
         )
     }
 }

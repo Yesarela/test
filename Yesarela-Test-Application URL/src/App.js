@@ -6,6 +6,8 @@ import { Home } from "./pages/Index";
 import Grapher from "./pages/Grapher";
 import Login from "./pages/Login";
 import Logout from "./pages/Logout";
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
 
